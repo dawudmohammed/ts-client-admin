@@ -1,4 +1,9 @@
 package Admin;
 
-public class AdminRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+public interface AdminRepository extends JpaRepository<Admin, Integer> {
+
+        Admin findAdminByUserName(String username);
 }
